@@ -1,0 +1,1 @@
+mysql -u root  < /tmp/populate_table_rsalbums_POWERSHELL.sql

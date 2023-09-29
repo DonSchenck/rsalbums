@@ -1,0 +1,1 @@
+mysql --user=root < /tmp/proof_query.sql

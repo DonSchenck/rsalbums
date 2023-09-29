@@ -1,0 +1,1 @@
+ mysql -uroot < /tmp/create_table_rsalbumstracks.sql

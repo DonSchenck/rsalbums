@@ -1,0 +1,6 @@
+USE rsalbums;
+LOAD DATA INFILE '/tmp/rsalbums.csv'
+INTO TABLE rsalbums
+FIELDS TERMINATED BY '|'
+ENCLOSED BY '"'
+LINES TERMINATED BY '\r\n';

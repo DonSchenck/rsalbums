@@ -1,6 +1,9 @@
 ## Create MariaDB Persistent database
 ##oc new-app --template=mariadb-persistent --param DATABASE_SERVICE_NAME=rsalbums --param MYSQL_USER=rsalbums --param MYSQL_PASSWORD=rsalbums --param MYSQL_DATABASE=rsalbums --param MYSQL_ROOT_PASSWORD=rsalbums
 
+echo 'Waiting for pod to be ready...'
+Sleep(15)
+
 ## Get name of pod into environment variable
 ### PowerShell
 (kubectl get pods | select-string '^rsalbums([^\s]+)-(?!deploy)') -match 'rsalbums([^\s]+)'; $podname = $matches[0]

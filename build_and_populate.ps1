@@ -1,14 +1,13 @@
 ## Create MariaDB Persistent database
 ##oc new-app --template=mariadb-persistent --param DATABASE_SERVICE_NAME=rsalbums --param MYSQL_USER=rsalbums --param MYSQL_PASSWORD=rsalbums --param MYSQL_DATABASE=rsalbums --param MYSQL_ROOT_PASSWORD=rsalbums
-
 echo 'Waiting for pod to be ready...'
 Sleep(15)
 
-## Get name of pod into environment variable
+echo 'Get name of pod into environment variable...'
 ### PowerShell
 (kubectl get pods | select-string '^rsalbums([^\s]+)-(?!deploy)') -match 'rsalbums([^\s]+)'; $podname = $matches[0]
 
-## Upload file(s) to create and populate table(s)
+echo 'Upload file(s) to create and populate table(s)...'
 ### PowerShell
 Write-Output "Copying files to pod"
 oc cp .\create_table_rsalbums.sql ${podname}:/tmp/create_table_rsalbums.sql

@@ -1,4 +1,7 @@
 
+## Part of the Red Hat Developer learning path entitled "Using Red Hat OpenShift labels"
+
+
 ## Create MariaDB Persistent database
 
 `oc new-app --template=mariadb-persistent --param DATABASE_SERVICE_NAME=rsalbums --param MYSQL_USER=rsalbums --param MYSQL_PASSWORD=rsalbums --param MYSQL_DATABASE=rsalbums --param MYSQL_ROOT_PASSWORD=rsalbums`
